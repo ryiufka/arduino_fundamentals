@@ -55,7 +55,7 @@ Oprócz elementów z pudełka potrzebne będą jeszcze trzy rzeczy:
 
 - **Trochę miejsca na biurku**  
   Wystarczy tyle, żeby położyć płytkę i kilka kabelków,  
-  oraz żeby nic nie spadło na podłogę (bo zawsze spada tak, że nie da się tego znaleźć).
+  oraz żeby nic nie spadło na podłogę (albo gorzej - do czarnej dziury).
 
 Internet może się przydać, ale nie jest potrzebny do każdego projektu.
 
@@ -83,7 +83,7 @@ Na przykład:
 - jeśli przyłożysz kartę → zdecyduj, czy to dobra karta, a jeśli tak - otwórz drzwi.  
 
 Reszta to szczegóły.  
-Szczegóły przyjdą później, razem z twoimi własnymi eksperymentami.
+Szczegóły przyjdą później, razem z Twoimi własnymi eksperymentami.
 
 ---
 
