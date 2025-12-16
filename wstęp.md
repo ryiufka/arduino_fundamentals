@@ -1,5 +1,7 @@
 # 🎄 Arduino  
-## Pierwsze eksperymenty z elektroniką
+## Pierwsze eksperymenty z elektroniką  
+### czyli jak sprawić, żeby rzeczy robiły to, co chcesz
+### Magia dla mugoli
 
 [ TU WSTAW OBRAZEK: Arduino na biurku, kilka elementów, kabel USB ]
 
@@ -7,10 +9,11 @@
 
 ## Wstęp
 
-To, co masz przed sobą, wygląda trochę jak pudełko z częściami zapasowymi do statku kosmicznego, ale spokojnie — **to tylko Arduino**.
+To, co masz przed sobą, wygląda trochę jak pudełko z częściami zapasowymi do statku kosmicznego,  
+ale spokojnie — **to tylko Arduino**.
 
 Arduino to mały komputer.  
-Nie taki jak w laptopie, tylko **taki, który potrafi sterować rzeczami**, na przykład:
+Nie taki skomplikowany jak w laptopie, ale taki, który **potrafi sterować rzeczami**, na przykład:  
 zapalać i gasić światła, wydawać dźwięki, mierzyć temperaturę albo reagować na przyciski.
 
 Nie musisz wiedzieć:
@@ -18,7 +21,7 @@ Nie musisz wiedzieć:
 - czym jest elektronika,
 - ani dlaczego ktoś wpadł na pomysł, żeby robić kabelki w tylu kolorach.
 
-Tego **nikt nie wie na początku**.
+**Nikt nie wie wszystkiego na początku**.
 
 ---
 
@@ -26,14 +29,44 @@ Tego **nikt nie wie na początku**.
 
 W tym krótkim kursie zbudujesz kilka prostych projektów, między innymi:
 
-- 💡 lampkę, która sama decyduje, kiedy ma świecić
-- 🎵 urządzenie, które wydaje dźwięki i da się nim „grać”
-- 🔐 prosty system dostępu, jak w grach albo filmach
+- 💡 lampkę, która sama decyduje, kiedy ma świecić  
+- 🎵 instrument, który wydaje dźwięki i da się nim „grać”  
+- 🔐 drzwi otwierane "na kartę", jak w grach albo filmach  
 
 Każdy projekt będzie:
 - bezpieczny,
 - możliwy do zrobienia bez lutowania i dodatkowych narzędzi,
 - i na tyle prosty, że **jeśli coś nie zadziała, da się to naprawić**.
+
+---
+
+## Czego jeszcze potrzebujemy?
+
+Oprócz elementów z pudełka potrzebne będą jeszcze trzy rzeczy:
+
+- **Komputer**  
+  Może być laptop albo komputer stacjonarny.  
+  Nie musi być nowy ani szybki — jego zadaniem jest tylko porozmawiać z Arduino.
+
+- **Kabel USB**  
+  Przez ten kabel Arduino dostaje program i prąd.  
+  To zwykły kabel, nie żaden specjalny kosmiczny przewód.
+
+- **Trochę miejsca na biurku**  
+  Wystarczy tyle, żeby położyć płytkę i kilka kabelków,  
+  oraz żeby nic nie spadło na podłogę (bo zawsze spada tak, że nie da się tego znaleźć).
+
+Internet może się przydać, ale nie jest potrzebny do każdego projektu.
+
+**I jeszcze jedno:** Arduino jest **bezpieczne**, bo działa na bardzo niskim napięciu.  
+Nie trzeba się bać, że coś „kopnie” albo spali się biurko.
+
+Nie potrzeba:
+- lutownicy,
+- śrubokrętów,
+- ani innych tajemniczych narzędzi.
+
+Wszystko będziemy łączyć **na wcisk**.
 
 ---
 
@@ -44,9 +77,9 @@ Arduino działa według bardzo prostej zasady:
 > **„Jeśli coś się wydarzy — zrób coś.”**
 
 Na przykład:
-- jeśli zrobi się ciemno → zapal światło,
-- jeśli ktoś naciśnie przycisk → wydaj dźwięk,
-- jeśli przyłożysz kartę → zdecyduj, czy to dobra karta, a jeśli tak - otwórz drzwi.
+- jeśli zrobi się ciemno → zapal światło,  
+- jeśli ktoś naciśnie przycisk → wydaj dźwięk,  
+- jeśli przyłożysz kartę → zdecyduj, czy to dobra karta, a jeśli tak — otwórz drzwi.  
 
 Reszta to szczegóły.  
 Szczegóły przyjdą później.
@@ -71,9 +104,9 @@ Tak właśnie wygląda eksperymentowanie.
 
 ## Jak korzystać z tego kursu?
 
-- Czytaj po kolei.
-- Rób jeden projekt naraz.
-- Nie przejmuj się, jeśli nie rozumiesz wszystkiego od razu.
+- Czytaj po kolei.  
+- Rób jeden projekt naraz.  
+- Nie przejmuj się, jeśli nie rozumiesz wszystkiego od razu.  
 
 Nie chodzi o to, żeby wszystko zapamiętać.  
 Chodzi o to, żeby **zobaczyć, że da się sterować światem za pomocą kilku kabelków i pomysłów**.
