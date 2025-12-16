@@ -1,7 +1,6 @@
 # 🎄 Arduino  
 ## Pierwsze eksperymenty z elektroniką  
-### czyli jak sprawić, żeby rzeczy robiły to, co chcesz
-### Magia dla mugoli
+### Magia dla mugoli, czyli jak sprawić, żeby rzeczy robiły to, co chcesz
 
 [ TU WSTAW OBRAZEK: Arduino na biurku, kilka elementów, kabel USB ]
 
@@ -21,7 +20,7 @@ Nie musisz wiedzieć:
 - czym jest elektronika,
 - ani dlaczego ktoś wpadł na pomysł, żeby robić kabelki w tylu kolorach.
 
-**Nikt nie wie wszystkiego na początku**.
+**Nikt nie wie wszystkiego na początku**. Cała sztuka polega na tym, żeby spróbować i zobaczyć efekty na własne oczy.
 
 ---
 
@@ -37,6 +36,8 @@ Każdy projekt będzie:
 - bezpieczny,
 - możliwy do zrobienia bez lutowania i dodatkowych narzędzi,
 - i na tyle prosty, że **jeśli coś nie zadziała, da się to naprawić**.
+
+Na końcu każdego projektu poczujesz się trochę jak magik — tylko zamiast różdżki masz kabelki i mikrokontroler. 
 
 ---
 
@@ -58,7 +59,7 @@ Oprócz elementów z pudełka potrzebne będą jeszcze trzy rzeczy:
 
 Internet może się przydać, ale nie jest potrzebny do każdego projektu.
 
-**I jeszcze jedno:** Arduino jest **bezpieczne**, bo działa na bardzo niskim napięciu.  
+I jeszcze jedno: Arduino jest **bezpieczne**, bo działa na bardzo niskim napięciu.  
 Nie trzeba się bać, że coś „kopnie” albo spali się biurko.
 
 Nie potrzeba:
@@ -82,7 +83,7 @@ Na przykład:
 - jeśli przyłożysz kartę → zdecyduj, czy to dobra karta, a jeśli tak — otwórz drzwi.  
 
 Reszta to szczegóły.  
-Szczegóły przyjdą później.
+Szczegóły przyjdą później, razem z twoimi własnymi eksperymentami.
 
 ---
 
@@ -109,7 +110,7 @@ Tak właśnie wygląda eksperymentowanie.
 - Nie przejmuj się, jeśli nie rozumiesz wszystkiego od razu.  
 
 Nie chodzi o to, żeby wszystko zapamiętać.  
-Chodzi o to, żeby **zobaczyć, że da się sterować światem za pomocą kilku kabelków i pomysłów**.
+Chodzi o to, żeby zobaczyć, że da się **sterować światem za pomocą kilku kabelków i pomysłów**.
 
 ---
 
