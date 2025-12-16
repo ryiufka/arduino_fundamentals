@@ -24,17 +24,17 @@ Nie musisz wiedzieć:
 
 ---
 
- ## Co będziesz BUDOWAĆ?
+ ## Co będziesz budować?
 
-W tym kursie nie będziesz „robić projekty". Będziesz **budować rzeczywiste urządzenia**, które naprawdę działają.
+W tym kursie będziesz **budować rzeczywiste urządzenia**, które naprawdę działają.
 
 Stworzysz między innymi:
 
 - 💡 **Smart lampkę** — włączy się kiedy będzie ciemno, wyłączy się jak zrobi się jasno
-- 🎵 **Instrument muzyczny** — będziesz na nim „grać" jak na pianinie
-- 🔐 **System dostępu na kartę** — jak w szpiegowskich filmach — otwiera się kartą, której Arduino rozpoznaje
+- 🎵 **Instrument muzyczny**, na którym można grać jak na pianinie (tylko trochę prostszym)
+- 🔐 **System dostępu na kartę** — jak w szpiegowskich filmach — otwiera się kartą, którą nasze urządzenie rozpoznaje
 - 📱 **Stację meteorologiczną** — mierzy temperaturę, wilgotność, wyświetla dane na ekranie LCD (jak w prawdziwych urządzeniach)
-- 🎮 **Grę** — zupełnie jak na retro konsolach z lat 80-tych
+- 🎮 **Grę** — zupełnie jak na starych konsolach z lat 80-tych
 
 Każdy projekt będzie:
 - bezpieczny (Arduino działa na bardzo niskim napięciu),
