@@ -24,20 +24,40 @@ Nie musisz wiedzieć:
 
 ---
 
-## Co będziemy robić?
+ ## Co będziesz BUDOWAĆ?
 
-W tym krótkim kursie zbudujesz kilka prostych projektów, między innymi:
+W tym kursie nie będziesz „robić projekty". Będziesz **budować rzeczywiste urządzenia**, które naprawdę działają.
 
-- 💡 lampkę, która sama decyduje, kiedy ma świecić  
-- 🎵 instrument, który wydaje dźwięki i da się nim „grać”  
-- 🔐 drzwi otwierane "na kartę", jak w grach albo filmach  
+Stworzysz między innymi:
+
+- 💡 **Smart lampkę** — włączy się kiedy będzie ciemno, wyłączy się jak zrobi się jasno
+- 🎵 **Instrument muzyczny** — będziesz na nim „grać" jak na pianinie
+- 🔐 **System dostępu na kartę** — jak w szpiegowskich filmach — otwiera się kartą, której Arduino rozpoznaje
+- 📱 **Stację meteorologiczną** — mierzy temperaturę, wilgotność, wyświetla dane na ekranie LCD (jak w prawdziwych urządzeniach)
+- 🎮 **Grę** — zupełnie jak na retro konsolach z lat 80-tych
 
 Każdy projekt będzie:
-- bezpieczny,
-- możliwy do zrobienia bez lutowania i dodatkowych narzędzi,
-- i na tyle prosty, że **jeśli coś nie zadziała, da się to naprawić**.
+- bezpieczny (Arduino działa na bardzo niskim napięciu),
+- możliwy do zrobienia **bez lutowania i specjalnych narzędzi**,
+- i na tyle prosty, że **jeśli coś nie zadziała, da się to naprawić w 2 minuty**.
 
-Na końcu każdego projektu poczujesz się trochę jak magik - tylko zamiast różdżki masz kabelki i mikrokontroler. 
+Na końcu każdego projektu poczujesz się jak inżynier, który właśnie **stworzył coś, co naprawdę działa**.
+
+---
+
+## Co jest w pudełku?
+
+To nie są zwyczajne kabelki. To są **rzeczywiste komponenty**, których używają inżynierowie na całym świecie:
+
+- **Czujniki** — mogą mierzyć temperaturę, światło, dźwięk, ruchy, poziom wody (dokładnie jak w smartfonach!)
+- **Silniki i servo** — będą sterować rzeczami, które się poruszają (roboty, drzwi, ramiona)
+- **Wyświetlacze** — matryca LED 8x8 i ekran LCD (jak w bankomatach i stacjach benzynowych)
+- **Odbiorniki IR i RFID** — technologia z pilotem do telewizora i kartami dostępu
+- **Przycisk, joystick, potencjometr** — rzeczy, którymi sterując, będziesz kontrolować wszystko
+- **Buzzer** — będzie wydawać dźwięki
+- **Rejestry przesuwne** — magiczne układy, które pozwolą ci sterować dziesiątkami rzeczy jednocześnie
+
+Wszystko jest do siebie podłączone **bez lutowania**. Po prostu przyciskasz, i działa.
 
 ---
 
@@ -47,7 +67,7 @@ Oprócz elementów z pudełka potrzebne będą jeszcze trzy rzeczy:
 
 - **Komputer**  
   Może być laptop albo komputer stacjonarny.  
-  Nie musi być nowy ani szybki - jego zadaniem jest tylko porozmawiać z Arduino.
+  Nie musi być nowy ani szybki — jego zadaniem jest tylko porozmawiać z Arduino.
 
 - **Kabel USB**  
   Przez ten kabel Arduino dostaje program i prąd.  
@@ -55,19 +75,12 @@ Oprócz elementów z pudełka potrzebne będą jeszcze trzy rzeczy:
 
 - **Trochę miejsca na biurku**  
   Wystarczy tyle, żeby położyć płytkę i kilka kabelków,  
-  oraz żeby nic nie spadło na podłogę (albo gorzej - do czarnej dziury).
+  oraz żeby nic nie spadło na podłogę (albo gorzej — do czarnej dziury).
 
 Internet może się przydać, ale nie jest potrzebny do każdego projektu.
 
 I jeszcze jedno: Arduino jest **bezpieczne**, bo działa na bardzo niskim napięciu.  
-Nie trzeba się bać, że coś „kopnie” albo spali się biurko.
-
-Nie potrzeba:
-- lutownicy,
-- śrubokrętów,
-- ani innych tajemniczych narzędzi.
-
-Wszystko będziemy łączyć **na wcisk**.
+Nie trzeba się bać, że coś „kopnie" albo spali się biurko.
 
 ---
 
@@ -75,15 +88,16 @@ Wszystko będziemy łączyć **na wcisk**.
 
 Arduino działa według bardzo prostej zasady:
 
-> **„Jeśli coś się wydarzy - zrób coś.”**
+> **„Jeśli coś się wydarzy — zrób coś."**
 
 Na przykład:
-- jeśli zrobi się ciemno → zapal światło,  
-- jeśli ktoś naciśnie przycisk → wydaj dźwięk,  
-- jeśli przyłożysz kartę → zdecyduj, czy to dobra karta, a jeśli tak - otwórz drzwi.  
+- jeśli zrobi się ciemno → zapal światło,
+- jeśli ktoś naciśnie przycisk → wydaj dźwięk,
+- jeśli przyłożysz kartę RFID → zdecyduj, czy to dobra karta, a jeśli tak — otwórz drzwi,
+- jeśli temperatura będzie zbyt wysoka → włącz wentylator.
 
 Reszta to szczegóły.  
-Szczegóły przyjdą później, razem z Twoimi własnymi eksperymentami.
+Szczegóły przyjdą później, razem z twoimi własnymi eksperymentami.
 
 ---
 
@@ -91,15 +105,17 @@ Szczegóły przyjdą później, razem z Twoimi własnymi eksperymentami.
 
 Jeśli coś nie działa:
 - to nie znaczy, że zrobiłeś coś źle,
-- to nie znaczy, że „się do tego nie nadajesz”.
+- to nie znaczy, że „się do tego nie nadajesz".
 
 Najczęściej:
 - kabel jest w złym miejscu,
 - coś nie jest do końca wciśnięte,
 - albo komputer jeszcze się zastanawia, co właśnie podłączyłeś.
 
-To normalne.  
+**To normalne.**  
 Tak właśnie wygląda eksperymentowanie.
+
+Każdy inżynier w świecie zaczynał od tego — od przewodów w złym miejscu i "czemu to nie działa?!". To część nauki.
 
 ---
 
