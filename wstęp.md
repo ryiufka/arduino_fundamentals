@@ -9,7 +9,7 @@
 ## Wstęp
 
 To, co masz przed sobą, wygląda trochę jak pudełko z częściami zapasowymi do statku kosmicznego,  
-ale spokojnie — **to tylko Arduino**.
+ale spokojnie - **to tylko Arduino**.
 
 Arduino to mały komputer.  
 Nie taki skomplikowany jak w laptopie, ale taki, który **potrafi sterować rzeczami**, na przykład:  
@@ -37,7 +37,7 @@ Każdy projekt będzie:
 - możliwy do zrobienia bez lutowania i dodatkowych narzędzi,
 - i na tyle prosty, że **jeśli coś nie zadziała, da się to naprawić**.
 
-Na końcu każdego projektu poczujesz się trochę jak magik — tylko zamiast różdżki masz kabelki i mikrokontroler. 
+Na końcu każdego projektu poczujesz się trochę jak magik - tylko zamiast różdżki masz kabelki i mikrokontroler. 
 
 ---
 
@@ -47,7 +47,7 @@ Oprócz elementów z pudełka potrzebne będą jeszcze trzy rzeczy:
 
 - **Komputer**  
   Może być laptop albo komputer stacjonarny.  
-  Nie musi być nowy ani szybki — jego zadaniem jest tylko porozmawiać z Arduino.
+  Nie musi być nowy ani szybki - jego zadaniem jest tylko porozmawiać z Arduino.
 
 - **Kabel USB**  
   Przez ten kabel Arduino dostaje program i prąd.  
@@ -75,12 +75,12 @@ Wszystko będziemy łączyć **na wcisk**.
 
 Arduino działa według bardzo prostej zasady:
 
-> **„Jeśli coś się wydarzy — zrób coś.”**
+> **„Jeśli coś się wydarzy - zrób coś.”**
 
 Na przykład:
 - jeśli zrobi się ciemno → zapal światło,  
 - jeśli ktoś naciśnie przycisk → wydaj dźwięk,  
-- jeśli przyłożysz kartę → zdecyduj, czy to dobra karta, a jeśli tak — otwórz drzwi.  
+- jeśli przyłożysz kartę → zdecyduj, czy to dobra karta, a jeśli tak - otwórz drzwi.  
 
 Reszta to szczegóły.  
 Szczegóły przyjdą później, razem z twoimi własnymi eksperymentami.
