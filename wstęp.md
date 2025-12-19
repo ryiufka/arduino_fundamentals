@@ -8,24 +8,22 @@
 
 ## Wstęp
 
-To, co masz przed sobą, wygląda trochę jak pudełko z częściami zapasowymi do statku kosmicznego, ale spokojnie - **to tylko mikrokontroler**.
-
-Mikrokontroler to mały komputer. Nie taki skomplikowany jak w laptopie, ale taki, który **potrafi sterować rzeczami**: zapalać i gasić światła, wydawać dźwięki, mierzyć temperaturę albo reagować na przyciski.
+To, co masz przed sobą, wygląda trochę jak pudełko z częściami zapasowymi do statku kosmicznego, ale spokojnie - **to tylko mikrokontroler**, taki mały komputer. Nie taki skomplikowany jak w laptopie, ale taki, który **potrafi sterować rzeczami**: zapalać i gasić światła, wydawać dźwięki, mierzyć temperaturę albo reagować na przyciski.
 
 Ale czekaj - to dopiero początek.
 
-Nie musisz wiedzieć czym jest programowanie, czym jest elektronika, ani dlaczego ktoś wpadł na pomysł, żeby zrobić kabelki w tylu kolorach. **Nikt nie wie wszystkiego na początku.** Cała sztuka polega na tym, żeby spróbować i zobaczyć efekty na własne oczy.
+Nie musisz wiedzieć czym jest programowanie ani rozumieć czym jest ta cała elektroniką. W tym kursie pokażemy Ci jak za pomocą otrzymanego zestawu zbudować swoje pierwsze prawdziwe automaty. 
 
 ---
 
 ## Co będziesz budować?
 
-W czasie tego kursu **zbudujesz rzeczywiste urządzenia**, które naprawdę działają:
+W czasie kursu **zbudujesz rzeczywiste urządzenia**, które naprawdę działają:
 - 💡 **Smart lampkę**, która włączy się kiedy będzie ciemno i wyłączy kiedy zrobi się jasno
 - 🎵 **Instrument muzyczny**, na którym można grać jak na pianinie (tylko trochę mniejszym)
 - 🔐 **Drzwi otwierane kartą** - jak w szpiegowskich filmach
 
-A dzięki zestawowi, który otrzymałeś będziesz mógł także stworzyć:
+Otrzymany zestaw pozwala również stworzyć (między innymi):
 - 🎮 **Grę na matryce LED** - jak na retro konsolach z lat 80-tych
 - 🤖 **Robota, który się rusza**
 - 📱 **Stację meteorologiczną** - mierzy temperaturę, wilgotność, wyświetla na ekranie
@@ -38,7 +36,7 @@ Każdy projekt będzie bezpieczny, możliwy do zrobienia **bez lutowania**, i pr
 
 ## Co jest w pudełku?
 
-To nie są zwyczajne kabelki. To są **rzeczywiste komponenty** używane przez inżynierów:
+Zestaw zawiera **rzeczywiste komponenty** używane przez inżynierów:
 
 - **Czujniki** - mierzą temperaturę, światło, dźwięk, ruchy, poziom wody (jak w smartfonach!)
 - **Silniki i servo** - sterują rzeczami, które się poruszają
@@ -48,17 +46,16 @@ To nie są zwyczajne kabelki. To są **rzeczywiste komponenty** używane przez i
 - **Buzzer** - wydaje dźwięki
 - **Rejestry przesuwne** - magiczne układy do sterowania wieloma rzeczami jednocześnie
 
-Wszystko podłącza się **bez lutowania** - po prostu przyciskasz, i działa.
+Wszystko podłącza się **bez lutowania** - po prostu wciskasz, i działa.
 
 ---
 
 ## Czego jeszcze potrzebujemy?
 
 - **Komputer** - laptop lub stacjonarny, nieważne czy nowy. Musi tylko porozmawiać z mikrokontrolerem.
-- **Kabel USB** - przez niego mikrokontroler dostaje program i prąd.
 - **Trochę miejsca na biurku** - tyle, żeby położyć płytkę i kabelki.
 
-Internet może się przydać, ale nie jest obowiązkowy do każdego projektu.
+To wszystko. Internet może się przydać, ale nie jest obowiązkowy do każdego projektu.
 
 Mikrokontroler jest **bezpieczny** - działa na bardzo niskim napięciu. Nie trzeba się bać, że coś „kopnie" albo spali się biurko. Nie potrzeba lutownicy, śrubokrętów ani innych tajemniczych narzędzi.
 
@@ -76,7 +73,7 @@ Przykłady:
 - jeśli przyłożysz kartę RFID → otwórz drzwi
 - jeśli temperatura będzie zbyt wysoka → włącz wentylator
 
-Reszta to szczegóły. Szczegóły przyjdą później, razem z twoimi własnymi eksperymentami.
+Reszta to szczegóły, które przyjdą później, razem z twoimi własnymi eksperymentami.
 
 ---
 
