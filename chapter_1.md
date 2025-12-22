@@ -1,190 +1,204 @@
-# Rozdział 1: Pierwsze Kroki z Arduino 🚀
+# Rozdział 1  
+## Podłączamy mikrokontroler i sprawdzamy, czy działa  
+### pierwszy test: czy komputer i mikrokontroler potrafią się dogadać
 
-Witaj w niesamowitym świecie mikrokontrolerów! Jeśli właśnie trafiłeś tutaj, oznacza to, że chcesz zacząć przygodę z Arduino. Świetnie! To jest dokładnie miejsce, w którym powinieneś być.
-
-## Co To Jest Arduino?
-
-Arduino to **otwartoźródłowa platforma elektroniczna** oparta na prostym sprzęcie i łatwym w użyciu oprogramowaniu. To najlepsze narzędzie dla każdego, kto chce nauczyć się elektroniki i programowania bez uciekania się do skomplikowanych laboratoriów uniwersyteckich.
-
-Wyobraź sobie małą deskę (płytkę) wielkości karty kredytowej, która może sterować światłami, silnikami, czujnikami i całą masą innych fantastycznych rzeczy. **To jest Arduino!**
-
-### Główne Cechy Arduino:
-- 🎯 **Prostota** - nawet dziecko może się tego nauczyć
-- 💪 **Moc** - wystarczająca do większości projektów hobbystycznych
-- 💰 **Tanio** - nie musisz sprzedawać samochodu
-- 🌍 **Wszechstronne** - możliwości są prawie nieograniczone
-- 🤝 **Społeczność** - miliony użytkowników gotowych Ci pomóc
-
-## Budowa Płytki Arduino
-
-Zanim zaczniesz pisać swój pierwszy program, musisz poznać anatomię Arduino. Oto główne komponenty:
-
-```
-┌─────────────────────────────────┐
-│       Arduino Uno Layout        │
-├─────────────────────────────────┤
-│  USB Port    [Microcontroller]  │
-│  Power       [Crystal Oscillator]│
-│  GND ●●●●●   [Capacitors]       │
-│  RESET ●●●   [Voltage Regulator]│
-│  5V ●●●●●●   [Connectors]       │
-│  3.3V ●●●●●● [LED]              │
-│  A0-A5       [Resistors]        │
-│  D0-D13      [General Layout]   │
-└─────────────────────────────────┘
-```
-
-### Kluczowe Elementy:
-
-| Element | Opis |
-|---------|------|
-| **Mikrokontroler (ATmega328P)** | Mózg Arduino - tutaj wykonywany jest Twój kod |
-| **Porty Cyfrowe (D0-D13)** | Można je ustawić jako wejście lub wyjście |
-| **Porty Analogowe (A0-A5)** | Czytają wartości analogowe (0-1023) |
-| **Port USB** | Łączność z komputerem i zasilanie |
-| **Zasilanie (5V, 3.3V, GND)** | Tętna życia Twojego projektu |
-| **Przycisk RESET** | Uruchamia program od nowa |
-| **LED (L)** | Mała lampka testowa na płytce |
-
-## Co Będziesz Potrzebować?
-
-Aby zacząć Twoją przygodę z Arduino, będziesz potrzebować:
-
-### Niezbędne Elementy:
-1. **Płytka Arduino** (Arduino Uno to najlepszy początek)
-2. **Kabel USB** (zwykły kabel micro-USB)
-3. **Komputer** (Windows, Mac, Linux - wszystko działa!)
-4. **Arduino IDE** (bezpłatne oprogramowanie do pisania kodu)
-
-### Przydatne Dodatki:
-- 📦 Zestaw komponentów (LED, rezystory, przyciski)
-- 🔌 Breadboard (plastikowa płytka do łączenia)
-- 🔗 Przewody przewodów (jumper wires)
-- 📚 Schematy i dokumentacja
-- 🔧 Śrubokręty i narzędzia
-
-## Instalacja Arduino IDE
-
-Oto szybki przewodnik:
-
-### Krok 1: Pobierz Arduino IDE
-Przejdź do [arduino.cc](https://www.arduino.cc) i pobierz wersję dla Twojego systemu operacyjnego.
-
-### Krok 2: Zainstaluj Program
-Postępuj zgodnie z instrukcjami instalatora. To proste!
-
-### Krok 3: Podłącz Arduino
-Weź swój kabel USB i podłącz Arduino do komputera. Powinny pojawić się nowe sterowniki.
-
-### Krok 4: Otwórz Arduino IDE
-Uruchom program i przejdź do:
-```
-Tools → Board → Arduino Uno
-Tools → Port → COM3 (lub odpowiedni port dla Twojego systemu)
-```
-
-## Twój Pierwszy Program: "Hello Arduino"!
-
-Oto klasyk każdego mikrokonrolera - **migająca dioda LED**!
-
-```cpp
-void setup() {
-  // setup() uruchamia się raz na początku
-  pinMode(13, OUTPUT); // Ustaw pin 13 jako wyjście
-}
-
-void loop() {
-  // loop() uruchamia się w nieskończoność
-  digitalWrite(13, HIGH);  // Włącz LED (zapalenie)
-  delay(1000);             // Czekaj 1 sekundę (1000 ms)
-  
-  digitalWrite(13, LOW);   // Wyłącz LED (zgaszenie)
-  delay(1000);             // Czekaj 1 sekundę
-}
-```
-
-### Co Się Tutaj Dzieje?
-
-1. **setup()** - Ta funkcja uruchamia się **jeden raz** na samym początku
-   - Konfigurujemy pin 13 jako OUTPUT (wyjście)
-   
-2. **loop()** - Ta funkcja uruchamia się **w nieskończoność**
-   - Włączamy LED (HIGH)
-   - Czekamy 1000 milisekund (1 sekunda)
-   - Wyłączamy LED (LOW)
-   - Czekamy kolejne 1000 milisekund
-   - I wszystko powtarza się...
-
-### Jak to Wgrać?
-
-1. ⚡ Skopiuj kod powyżej do Arduino IDE
-2. ⚡ Kliknij przycisk **Verify** (zaznaczenie) - sprawdza błędy
-3. ⚡ Kliknij przycisk **Upload** (strzałka) - wysyła kod do Arduino
-4. ⚡ Obserwuj diodę LED (pin 13) - powinna migać co sekundę!
-
-## Podstawowe Koncepty
-
-### Cyfrowe vs. Analogowe
-
-- **Cyfrowe**: ON lub OFF, HIGH lub LOW, 1 lub 0
-- **Analogowe**: Wartości od 0 do 1023, sygnały gradacyjne
-
-### Opóźnienia i Timing
-
-```cpp
-delay(1000);        // Czeka 1000 ms (1 sekunda)
-delayMicroseconds(1000); // Czeka 1000 mikrosekund
-```
-
-### Czytanie i Pisanie
-
-```cpp
-digitalWrite(pin, HIGH);  // Ustawia pin na HIGH (5V)
-digitalRead(pin);         // Czyta stan pinu (HIGH/LOW)
-analogWrite(pin, 255);    // Pisze wartość analogową (0-255)
-analogRead(pin);          // Czyta wartość analogową (0-1023)
-```
-
-## Eksperymenty do Spróbowania
-
-### 1. Zmień Szybkość Migania
-Spróbuj zmienić wartości `delay()` - co się stanie, gdy ustawisz 500 ms? A 2000 ms?
-
-### 2. Użyj Przycisku
-Dodaj przycisk i uruchom LED tylko gdy przycisk jest wciśnięty!
-
-### 3. Zmień PIN
-Zamiast pinu 13, użyj innego pinu cyfrowego - jakie są różnice?
-
-## Typowe Problemy i Rozwiązania
-
-| Problem | Przyczyna | Rozwiązanie |
-|---------|-----------|------------|
-| Brak diody LED | Źle wybrany port | Sprawdź Tools → Port |
-| LED nie miga | Zły PIN | Użyj pinu 13 na początku |
-| Błędy kompilacji | Składnia kodu | Przeczytaj komunikaty o błędach |
-| Arduino się nie ładuje | Brak sterownika | Zainstaluj CH340 sterowniki |
-
-## Podsumowanie
-
-Gratulacje! 🎉 Właśnie zrobiłeś swój pierwszy krok w świat Arduino:
-
-✅ Poznałeś budowę Arduino  
-✅ Zainstalowałeś Arduino IDE  
-✅ Wgrałeś swój pierwszy program  
-✅ Rozumiesz funkcje `setup()` i `loop()`  
-✅ Jesteś gotów na następne wyzwania!
-
-## Co Dalej?
-
-W następnym rozdziale będziemy pracować z:
-- Przyciskami i przełącznikami
-- Czujnikami
-- Komunikacją szeregową
-- I wieloma innymi ekscytującymi rzeczami!
+[ TU WSTAW OBRAZEK: Mikrokontroler, kabel USB A–B, komputer ]
 
 ---
 
-**Pamiętaj:** Każdy mistrz Arduino kiedyś zaczynał od migającej diody LED. Nie poddawaj się, eksperymentuj i zawsze czytaj dokumentację! 🚀
+## Co dziś robimy?
 
-**Czy jesteś gotowy na następny poziom?** Przejdź do Rozdziału 2 i odkryj moc przycisku! 💪
+W tym rozdziale zrobimy jedną, bardzo konkretną rzecz.
+
+Sprawdzimy, czy:
+- komputer,
+- kabel,
+- program Arduino,
+- i mikrokontroler
+
+potrafią ze sobą współpracować.
+
+Jeśli na końcu **dioda zacznie migać**, to znaczy, że wszystko działa  
+i możemy iść dalej.
+
+---
+
+## Najpierw jedno ważne wyjaśnienie
+
+To, co masz na biurku, to **mikrokontroler na płytce zgodnej z Arduino**.
+
+- **Mikrokontroler** to mały komputer, który wykonuje program.
+- **Arduino** to nazwa programu i gotowych przykładów,  
+  z których korzystamy, żeby było prościej.
+
+Na razie nie musisz tego zapamiętywać.  
+Wystarczy, że zobaczysz, że **to działa**.
+
+---
+
+## Krok 1: podłącz mikrokontroler do komputera
+
+Weź:
+- mikrokontroler,
+- kabel USB A–B.
+
+Podłącz kabel:
+- jednym końcem do mikrokontrolera,
+- drugim do komputera.
+
+[ TU WSTAW OBRAZEK: Mikrokontroler podłączony do laptopa ]
+
+Na płytce powinny zapalić się małe diody.  
+To znak, że mikrokontroler dostał prąd.
+
+Jeśli diody świecą, możemy iść dalej.
+
+---
+
+## Krok 2: zainstaluj Arduino IDE
+
+Żeby wysłać program do mikrokontrolera,
+potrzebujemy jednego programu.
+
+Nazywa się **Arduino IDE**.
+
+### Co robisz:
+1. Wejdź na stronę **arduino.cc**
+2. Pobierz **Arduino IDE**
+3. Zainstaluj jak zwykły program
+
+[ TU WSTAW OBRAZEK: Strona Arduino IDE / instalator ]
+
+Nie zmieniaj ustawień.
+Klikaj „Dalej”.
+To wystarczy.
+
+---
+
+## Krok 3: uruchom Arduino IDE
+
+Po uruchomieniu zobaczysz okno z tekstem.
+To normalne.
+
+Na razie nic nie piszemy  
+i niczego nie zmieniamy.
+
+---
+
+## Krok 4: wybierz płytkę i port
+
+Teraz musimy powiedzieć programowi,
+z jakim mikrokontrolerem ma rozmawiać.
+
+W Arduino IDE:
+- wejdź w **Narzędzia → Płytka**
+- wybierz **Arduino Uno**
+
+[ TU WSTAW OBRAZEK: Menu wyboru płytki ]
+
+Potem:
+- **Narzędzia → Port**
+- wybierz port, który się pojawił
+
+[ TU WSTAW OBRAZEK: Menu wyboru portu ]
+
+Jeśli widzisz port,
+to znaczy, że komputer widzi mikrokontroler.
+
+To kluczowy moment.
+
+---
+
+## Krok 5: test „Blink”
+
+Na początek nie będziemy nic wymyślać.
+Skorzystamy z gotowego testu.
+
+Nazywa się **Blink**  
+i robi jedną rzecz:
+
+> zapala i gasi diodę LED na płytce.
+
+To nie jest program do nauki.
+To jest **test połączenia**.
+
+---
+
+### Otwórz gotowy przykład
+
+W menu wybierz:
+**Plik → Przykłady → 01.Basics → Blink**
+
+[ TU WSTAW OBRAZEK: Menu z przykładem Blink ]
+
+Zobaczysz gotowy kod.
+Nic nie zmieniaj.
+
+---
+
+## Krok 6: wgraj program do mikrokontrolera
+
+Kliknij:
+- **Sprawdź**,
+- a potem **Wgraj**.
+
+[ TU WSTAW OBRAZEK: Przyciski Sprawdź i Wgraj ]
+
+Przez kilka sekund:
+- program jest wysyłany,
+- diody na płytce mogą migać.
+
+To normalne.
+
+---
+
+## Co powinno się wydarzyć?
+
+Na płytce jest mała dioda,
+najczęściej opisana literą **L**.
+
+Jeśli wszystko poszło dobrze:
+- dioda zapala się,
+- po chwili gaśnie,
+- i robi tak w kółko.
+
+[ TU WSTAW OBRAZEK: Migająca dioda LED na płytce ]
+
+To znaczy, że:
+- komputer wysłał program,
+- mikrokontroler go odebrał,
+- i wykonuje dokładnie to, co dostał.
+
+---
+
+## Jeśli dioda nie miga
+
+Spokojnie. To się zdarza.
+
+Sprawdź:
+- czy wybrałeś właściwą płytkę,
+- czy wybrałeś port,
+- czy kabel USB jest dobrze podłączony.
+
+W większości przypadków problem jest właśnie tutaj.
+
+---
+
+## Co właśnie osiągnąłeś?
+
+Jeśli dioda miga, to znaczy, że:
+- komputer,
+- kabel,
+- program Arduino,
+- i mikrokontroler
+
+właśnie się dogadały.
+
+To **najtrudniejszy moment** masz już za sobą.
+
+W następnym rozdziale:
+- podłączymy pierwsze elementy,
+- i zaczniemy sterować czymś,
+  co sam dołożyłeś do układu.
+
+Idziemy dalej.
