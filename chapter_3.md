@@ -2,8 +2,6 @@
 ## Instrument muzyczny, na którym da się grać  
 ### czyli uczymy mikrokontroler wydawać dźwięki
 
-[ MIKROKONTROLER PŁYTKA_STYKOWA BUZZER_PASYWNY PRZYCISK ]
-
 ---
 
 ## Co dziś zrobimy?
