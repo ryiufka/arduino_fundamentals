@@ -2,8 +2,6 @@
 ## Podłączamy mikrokontroler i sprawdzamy, czy działa  
 ### pierwszy test: czy komputer i mikrokontroler potrafią się dogadać
 
-[ LAPTOP MIKROKONTROLER ]
-
 ---
 
 ## Co dziś robimy?
