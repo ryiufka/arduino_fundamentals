@@ -1,8 +1,6 @@
 # 🔐 Rozdział 4  
 ## Drzwi, które wiedzą, kogo wpuścić  
 
-[ TU WSTAW OBRAZEK: mikrokontroler + czytnik RFID + serwo SG90 + karta ]
-
 ---
 
 ## O co tu chodzi?
