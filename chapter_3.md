@@ -1,6 +1,6 @@
 # Rozdział 3  
 ## Instrument muzyczny, na którym da się grać  
-### czyli jak mikrokontroler uczy się słuchać i wydawać dźwięki
+### czyli uczymy mikrokontroler wydawać dźwięki
 
 [ TU WSTAW OBRAZEK: Płytka stykowa, buzzer, kilka przycisków, przewody ]
 
@@ -29,8 +29,7 @@ Buzzer to mały głośniczek, który:
 - potrafi drgać bardzo szybko,
 - a mikrokontroler może mu powiedzieć, **jak szybko ma drgać**.
 
-Różne prędkości drgań  
-to różne dźwięki.
+Różne prędkości drgań to różne dźwięki.
 
 ---
 
