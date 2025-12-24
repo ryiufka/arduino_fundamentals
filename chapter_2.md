@@ -121,7 +121,7 @@ Każdemu się zdarza.
 ### Jak sprawdzić, czy coś jest połączone?
 
 Zadaj sobie pytanie:
-> „Czy te dwa elementy są w tym samym wiersz i w tej samej kolumnie dziurek?”
+> „Czy te dwa elementy są w tej samej kolumnie (w środku płytki) albo tej samej linii (po bokach)?”
 
 Jeśli tak → są połączone.  
 Jeśli nie → nie są.
@@ -165,8 +165,8 @@ Weź fotorezystor i kolejny rezystor.
 
 Podłącz:
 - jedną nóżkę fotorezystora do 5V  
-- drugą nóżkę do rezystora
-- rezystor do wejścia analogowego A0
+- drugą nóżkę fotorezystora do wejścia analogowego A0  
+- rezystor między A0 a GND
 
 To połączenie sprawia, że mikrokontroler dostaje liczbę, która mówi mu, jak jasno jest w pokoju.
 
@@ -264,7 +264,7 @@ Zmień działanie lampki tak, żeby:
 - zapalała się, gdy jest **za jasno**  
 - gasła, gdy światło spadnie  
 
-To już nie będzie lampka, tylko a.
+To już nie będzie lampka, tylko urządzenie alarmujące, że jest zbyt jasno.
 
 Podpowiedź: Zmień < na > w programie
 
