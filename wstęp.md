@@ -2,8 +2,6 @@
 ## Pierwsze eksperymenty z elektroniką
 ### Magia dla mugoli, czyli jak sprawić, żeby rzeczy robiły to, co chcesz
 
-[ TU WSTAW OBRAZEK: Mikrokontroler na biurku, kilka elementów, kabel USB ]
-
 ---
 
 ## Wstęp
@@ -23,7 +21,7 @@ W czasie kursu **zbudujesz rzeczywiste urządzenia**, które naprawdę działaj�
 - 🎵 **Instrument muzyczny**, na którym można grać jak na pianinie (tylko trochę mniejszym)
 - 🔐 **Drzwi otwierane kartą** - jak w szpiegowskich filmach
 
-Otrzymany zestaw pozwala również stworzyć (między innymi):
+Otrzymany zestaw pozwala również stworzyć (między innymi, bo wszystko zależy od Twoich pomysłów):
 - 🎮 **Grę na matryce LED** - jak na retro konsolach z lat 80-tych
 - 🤖 **Robota, który się rusza**
 - 📱 **Stację meteorologiczną** - mierzy temperaturę, wilgotność, wyświetla na ekranie
