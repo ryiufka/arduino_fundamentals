@@ -130,7 +130,7 @@ Wgraj program testowy, który:
 - odczyta numer karty,
 - pokaże go w komputerze.
 
-```
+```cpp
 #include <SPI.h>
 #include <MFRC522.h>
 
@@ -222,14 +222,63 @@ Teraz mówimy mikrokontrolerowi:
 > TO otwórz drzwi  
 > W PRZECIWNYM RAZIE nie rób nic**
 
-To jest dokładnie ta sama zasada,
-którą znasz z poprzednich rozdziałów.
+To jest dokładnie ta sama zasada, którą znasz z poprzednich rozdziałów.
 
-Tylko zamiast:
-- światła,
-- albo przycisku,
+Tylko teraz **sprawdzamy kartę** zamiast światła albo przycisku.
 
-sprawdzamy **kartę**.
+Wgraj do mikrokontrolera program:
+```cpp
+#include <SPI.h>
+#include <MFRC522.h>
+#include <Servo.h>
+
+#define SDA_PIN 10
+#define RST_PIN 9
+
+MFRC522 rfid(SDA_PIN, RST_PIN);
+Servo servo;
+
+int servoPin = 6;
+
+// TU WPISZ NUMER SWOJEJ KARTY
+byte card0 = 0x4A;
+byte card1 = 0x7F;
+byte card2 = 0x2C;
+byte card3 = 0x91;
+
+void setup() {
+  SPI.begin();
+  rfid.PCD_Init();
+
+  servo.attach(servoPin);
+  servo.write(0);   // drzwi zamkniete
+}
+
+void loop() {
+
+  if (!rfid.PICC_IsNewCardPresent()) {
+    return;
+  }
+
+  if (!rfid.PICC_ReadCardSerial()) {
+    return;
+  }
+
+  if (rfid.uid.uidByte[0] == card0 &&
+      rfid.uid.uidByte[1] == card1 &&
+      rfid.uid.uidByte[2] == card2 &&
+      rfid.uid.uidByte[3] == card3) {
+
+    servo.write(90);   // otworz drzwi
+    delay(3000);
+    servo.write(0);    // zamknij drzwi
+  }
+
+  rfid.PICC_HaltA();
+}
+```
+
+Teraz zbliż kartę do czytnika. Serwo powinno się poruszyć (czyli otworzyć drzwi).
 
 ---
 
@@ -255,9 +304,6 @@ To jest **prawdziwa logika systemów**.
 Jeśli chcesz pójść dalej:
 
 - 🔄 zmień kąt otwarcia serwa  
-- ⏱ zmień czas, na jaki drzwi są otwarte  
-- 🔐 dodaj drugą kartę z dostępem  
-- 🚫 spraw, żeby „zła” karta nic nie robiła  
 - 🔊 dodaj dźwięk przy otwarciu  
 
 Nie zmieniasz elektroniki.
@@ -268,7 +314,6 @@ Zmienia się tylko **instrukcja w programie**.
 ## Jeśli coś nie działa
 
 Sprawdź:
-- czy karta jest RFID 13,56 MHz,
 - czy przewody serwa są dobrze podłączone,
 - czy piny w kodzie zgadzają się z podłączeniem,
 - czy czytnik RFID ma zasilanie.
@@ -277,16 +322,3 @@ Najczęściej:
 > to jeden kabel w złym miejscu.
 
 I to jest normalne.
-
----
-
-## Co dalej?
-
-W kolejnym rozdziale możemy:
-- połączyć kartę z kodem PIN,
-- zrobić alarm,
-- albo użyć prawdziwego przekaźnika.
-
-Ale najpierw zapamiętaj jedno:
-
-> **Nauczyłeś mikrokontroler rozpoznawać, kto stoi przed drzwiami.**
