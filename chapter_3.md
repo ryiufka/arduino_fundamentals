@@ -2,7 +2,7 @@
 ## Instrument muzyczny, na którym da się grać  
 ### czyli uczymy mikrokontroler wydawać dźwięki
 
-[ TU WSTAW OBRAZEK: Płytka stykowa, buzzer, kilka przycisków, przewody ]
+[ MIKROKONTROLER PŁYTKA_STYKOWA BUZZER_PASYWNY PRZYCISK ]
 
 ---
 
@@ -38,12 +38,10 @@ Różne prędkości drgań to różne dźwięki.
 Z zestawu weź:
 - mikrokontroler  
 - płytkę stykową  
-- buzzer  
+- buzzer pasywny (ten z generatorem gra tylko jeden dźwięk)
 - 4 przyciski  
 - 4 rezystory  
 - kilka przewodów  
-
-[ TU WSTAW OBRAZEK: Elementy potrzebne do instrumentu ]
 
 ---
 
@@ -56,8 +54,6 @@ Podłącz przyciski do płytki stykowej tak, żeby:
 - drugi pin był podłączony do wejścia mikrokontrolera,
 - rezystor zapobiegał przypadkowemu włączaniu.
 
-[ TU WSTAW OBRAZEK: Podłączenie przycisków jako klawiszy ]
-
 ---
 
 ## Krok 2: podłącz buzzer
@@ -67,8 +63,6 @@ Buzzer będzie wydawał dźwięk.
 Podłącz:
 - jeden pin buzzera do pinu cyfrowego mikrokontrolera,
 - drugi pin do GND.
-
-[ TU WSTAW OBRAZEK: Podłączenie buzzera ]
 
 Na razie cisza.  
 To dobrze.
@@ -150,8 +144,6 @@ Dodaj:
 
 Ile klawiszy da się sensownie obsłużyć?
 
-[ TU ROZSZERZENIE KODU – WIĘCEJ PRZYCISKÓW ]
-
 ---
 
 ### 2. Zagraj melodię
@@ -159,20 +151,16 @@ Zrób program, który:
 - po naciśnięciu jednego przycisku
 - zagra krótką melodię zamiast jednej nuty.
 
-[ TU ROZSZERZENIE KODU – MELODIA ]
-
 ---
 
 ### 3. Instrument perkusyjny
-Zmień dźwięki tak, żeby:
+Zmień wydawane dźwięki tak, żeby:
 - jeden przycisk był „bębnem”,
 - inny „hi-hatem”,
 - jeszcze inny „klaskaniem”.
 
 To już nie pianino.  
 To perkusja.
-
-[ TU ZMIANA DŹWIĘKÓW ]
 
 ---
 
@@ -181,25 +169,8 @@ Spraw, żeby:
 - im dłużej trzymasz przycisk,
 - tym dłużej albo głośniej gra dźwięk.
 
-[ TU ROZSZERZENIE KODU – CZAS NACIŚNIĘCIA ]
-
----
-
-### 5. Cisza absolutna
-Dodaj przycisk, który:
-- natychmiast wyłącza wszystkie dźwięki.
-
-Każdy instrument potrzebuje pauzy.
-
-[ TU DODANIE PRZYCISKU STOP ]
-
 ---
 
 ## Co dalej?
 
-W następnym rozdziale:
-- połączymy dźwięk z ruchem,
-- albo nauczymy mikrokontroler reagować na pilota,
-- albo zrobimy urządzenie, które **samo decyduje, co zagrać**.
-
-Mikrokontroler już potrafi grać.
+W następnym rozdziale zbudujemy mechanizm otwierający drzwi za pomocą karty RFID.
