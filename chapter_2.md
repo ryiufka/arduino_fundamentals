@@ -8,7 +8,7 @@
 
 ## Co dziś zrobimy?
 
-W tym rozdziale zbudujemy **smart lampkę**.
+W tym rozdziale zbudujemy **inteligentną lampkę**.
 
 Będzie działać tak:
 - gdy zrobi się ciemno, lampka się włączy  
@@ -176,7 +176,7 @@ To połączenie sprawia, że mikrokontroler dostaje liczbę, która mówi mu, ja
 
 Teraz czas na program.
 
-W Arduino IDE wpisz kod do smart lampki.
+W Arduino IDE wpisz kod do lampki.
 
 ```cpp
 int ledPin = 8;
