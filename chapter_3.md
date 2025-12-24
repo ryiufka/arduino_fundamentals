@@ -40,8 +40,9 @@ Z zestawu weź:
 - płytkę stykową  
 - buzzer pasywny (ten z generatorem gra tylko jeden dźwięk)
 - 4 przyciski  
-- 4 rezystory  
 - kilka przewodów  
+
+Najpierw podłącz GND z mikrokontrolera do bocznej linii płytki stykowej.
 
 ---
 
@@ -157,8 +158,8 @@ to znaczy, że **instrument działa**.
 
 Sprawdź:
 - czy buzzer jest dobrze podłączony,
-- czy przyciski mają rezystory,
-- czy piny w kodzie zgadzają się z pinami na płytce.
+- czy przyciski są włożone w poprzek przerwy w płytce,
+- czy piny w kodzie zgadzają się z pinami na mikrokontrolerze.
 
 Najczęstszy problem:
 „Gra cały czas” albo „nie gra wcale”.
