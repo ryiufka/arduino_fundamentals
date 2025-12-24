@@ -2,8 +2,6 @@
 ## Inteligentna lampka, która wie, kiedy jest ciemno  
 ### czyli jak mikrokontroler uczy się patrzeć
 
-[ MIKROKONTROLER PŁYTKA_STYKOWA DIODA_LED FOTOREZYSTOR PRZEWODY ]
-
 ---
 
 ## Co dziś zrobimy?
