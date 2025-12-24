@@ -19,7 +19,7 @@ Nie musisz wiedzieć czym jest programowanie ani rozumieć czym jest ta cała el
 ## Co będziesz budować?
 
 W czasie kursu **zbudujesz rzeczywiste urządzenia**, które naprawdę działają:
-- 💡 **Smart lampkę**, która włączy się kiedy będzie ciemno i wyłączy kiedy zrobi się jasno
+- 💡 **Inteligentną lampkę**, która włączy się kiedy będzie ciemno i wyłączy kiedy zrobi się jasno
 - 🎵 **Instrument muzyczny**, na którym można grać jak na pianinie (tylko trochę mniejszym)
 - 🔐 **Drzwi otwierane kartą** - jak w szpiegowskich filmach
 
