@@ -1,8 +1,8 @@
 # Rozdział 2  
-## Inteligentna waxlampka, która wie, kiedy jest ciemno  
+## Inteligentna lampka, która wie, kiedy jest ciemno  
 ### czyli jak mikrokontroler uczy się patrzeć
 
-[ TU WSTAW OBRAZEK: Płytka stykowa, dioda LED, fotorezystor, kilka przewodów ]
+[ MIKROKONTROLER PŁYTKA_STYKOWA DIODA_LED FOTOREZYSTOR PRZEWODY ]
 
 ---
 
@@ -14,7 +14,7 @@ Będzie działać tak:
 - gdy zrobi się ciemno, lampka się włączy  
 - gdy zrobi się jasno, lampka się wyłączy  
 
-Nie będziemy zgadywać ani naciskać przycisków.  
+Nie będziemy nic zgadywać ani naciskać przycisków.  
 Lampka **sama podejmie decyzję**.
 
 ---
@@ -33,7 +33,7 @@ Jeśli liczba jest mała, to znaczy, że jest ciemno.
 Jeśli duża, to znaczy, że jest jasno.
 
 To nie magia.  
-To po prostu liczenie.
+To proste porównywanie wartości.
 
 ---
 
@@ -48,7 +48,85 @@ Z zestawu weź:
 - rezystor do fotorezystora  
 - kilka przewodów  
 
-[ TU WSTAW OBRAZEK: Elementy potrzebne do projektu ]
+---
+
+### Jak działa płytka stykowa (w 2 minuty)
+
+Płytka stykowa wygląda jak plastik z dziurkami,
+ale w środku ma **ukryte połączenia**.
+
+Jeśli tego nie wiesz, wszystko wydaje się losowe.
+Jeśli to wiesz, nagle wszystko zaczyna mieć sens.
+
+---
+
+### Najważniejsza zasada
+
+Dziurki **nie są połączone wszystkie ze sobą**.
+
+Są połączone tylko w **małych grupach**.
+
+---
+
+### Środkowa część płytki
+
+W środkowej części:
+- każda **kolumna 5 dziurek** jest połączona razem,
+- prąd może płynąć tylko w tej piątce,
+- obok już nie.
+
+Czyli:
+- włożysz dwa elementy w tę samą kolumnę → są połączone,
+- w inną kolumnę → już nie.
+
+To dlatego elementy „trzymają się” razem bez lutowania.
+
+---
+
+### Dwie połówki płytki
+
+Płytka stykowa ma **przerwę pośrodku**.
+
+Ta przerwa jest bardzo ważna:
+- elementy po lewej i prawej stronie **nie są połączone**,
+- dzięki temu można włożyć układy scalone dokładnie pośrodku.
+
+Na początku po prostu zapamiętaj:
+> przerwa = brak połączenia
+
+---
+
+### Długie linie po bokach
+
+Po bokach płytki są długie linie.
+
+W tych liniach:
+- wszystkie dziurki w jednej linii są połączone,
+- to taki „przedłużacz” dla prądu.
+
+---
+
+### Jedna ważna rzecz
+
+Jeśli coś nie działa, bardzo często:
+- element jest w **złej kolumnie**,
+- przewód jest **obok, a nie razem**,
+- wygląda dobrze, ale **nie jest połączone**.
+
+To normalne.
+Każdemu się zdarza.
+
+---
+
+### Jak sprawdzić, czy coś jest połączone?
+
+Zadaj sobie pytanie:
+> „Czy te dwa elementy są w tym samym wiersz i w tej samej kolumnie dziurek?”
+
+Jeśli tak → są połączone.  
+Jeśli nie → nie są.
+
+To wystarczy na początek.
 
 ---
 
@@ -56,23 +134,24 @@ Z zestawu weź:
 
 Połóż płytkę stykową obok mikrokontrolera.  
 Wszystkie elementy połączymy **bez lutowania**, tylko na wcisk.
+Podłącz 5V i GND z mikrokontrolera do bocznych linii płytki stykowej.
+Dzięki temu wszystkie elementy będą miały zasilanie.
 
 ---
 
 ## Krok 2: podłącz diodę LED
 
 Dioda LED to nasza lampka.
+Weź diodę LED i jeden rezystor.
 
 Ważne:
 - dioda ma dwie nóżki  
 - jedna jest dłuższa, druga krótsza  
 
 Podłącz:
-- dłuższą nóżkę diody do rezystora  
-- rezystor do pinu cyfrowego mikrokontrolera (np. 8)  
-- krótszą nóżkę diody do GND  
-
-[ TU WSTAW OBRAZEK: Podłączenie diody LED z rezystorem ]
+- jedną nóżkę rezystora do pinu cyfrowego mikrokontrolera (np. 8)
+- dłuższą nóżkę diody do drugiej nóżki rezystora  
+- krótszą nóżkę diody do GND
 
 Na razie dioda się nie świeci.  
 To normalne.
@@ -82,26 +161,41 @@ To normalne.
 ## Krok 3: podłącz czujnik światła
 
 Fotorezystor zmienia swoje zachowanie w zależności od światła.
+Weź fotorezystor i kolejny rezystor.
 
 Podłącz:
 - jedną nóżkę fotorezystora do 5V  
-- drugą nóżkę do wejścia analogowego A0  
-- między tę drugą nóżkę a GND podłącz rezystor  
+- drugą nóżkę do rezystora
+- rezystor do wejścia analogowego A0
 
-[ TU WSTAW OBRAZEK: Podłączenie fotorezystora jako dzielnika napięcia ]
-
-To połączenie sprawia, że mikrokontroler dostaje liczbę,
-która mówi mu, jak jasno jest w pokoju.
+To połączenie sprawia, że mikrokontroler dostaje liczbę, która mówi mu, jak jasno jest w pokoju.
 
 ---
 
-## Krok 4: wgraj program do smart lampki
+## Krok 4: wgraj program do inteligentnej lampki
 
 Teraz czas na program.
 
 W Arduino IDE wpisz kod do smart lampki.
 
-[ TU WSTAW KOD PROGRAMU SMART LAMPKI ]
+```cpp
+int ledPin = 8;
+int lightSensor = A0;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  int lightLevel = analogRead(lightSensor);
+
+  if (lightLevel < 400) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}
+```
 
 Kliknij **Sprawdź**, a potem **Wgraj**.
 
@@ -122,7 +216,7 @@ Teraz:
 Dioda powinna zgasnąć.
 
 Jeśli tak się dzieje,  
-**właśnie zbudowałeś smart lampkę**.
+**właśnie zbudowałeś inteligentną lampkę**.
 
 ---
 
@@ -161,63 +255,40 @@ Spraw, żeby lampka:
 - zapalała się tylko wtedy, gdy jest **naprawdę bardzo ciemno**  
 - w zwykłym półmroku pozostawała zgaszona  
 
-Podpowiedź: zmień wartość graniczną w programie.
-
-[ TU ZMIANA W KODZIE – PRÓG JASNOŚCI ]
+Podpowiedź: zmień wartość 400 w programie.
 
 ---
 
-### 2. Lampka strachliwa
+### 2. Alarm przeciwsłoneczny
+Zmień działanie lampki tak, żeby:
+- zapalała się, gdy jest **za jasno**  
+- gasła, gdy światło spadnie  
+
+To już nie będzie lampka, tylko a.
+
+Podpowiedź: Zmień < na > w programie
+
+---
+
+### 3. Lampka strachliwa
 Zrób lampkę, która:
 - zapala się, gdy zrobi się ciemno  
 - ale gaśnie dopiero wtedy, gdy zrobi się **bardzo jasno**  
 
 To sprawi, że lampka nie będzie „migać” przy małych zmianach światła.
 
-[ TU ZMIANA W KODZIE – DWA RÓŻNE PROGI ]
-
----
-
-### 3. Alarm przeciwsłoneczny
-Zmień działanie lampki tak, żeby:
-- zapalała się, gdy jest **za jasno**  
-- gasła, gdy światło spadnie  
-
-To już nie jest lampka.
-To czujnik.
-
-[ TU ZMIANA W KODZIE – ODWROTNA LOGIKA ]
-
----
-
-### 4. Licznik dnia i nocy
-Zrób program, który:
-- zapamięta, ile razy zrobiło się jasno i ciemno  
-- po kilku zmianach będzie migał diodą inaczej  
-
-To ćwiczenie uczy pamięci.
-
-[ TU ROZSZERZENIE KODU – ZLICZANIE ZDARZEŃ ]
-
----
-
-### 5. Lampka z opóźnieniem
-Spraw, żeby:
-- lampka zapalała się dopiero po kilku sekundach ciemności  
-- i gasła dopiero po kilku sekundach światła  
-
-Tak działa wiele prawdziwych urządzeń.
-
-[ TU ROZSZERZENIE KODU – OPÓŹNIENIE CZASOWE ]
+Podpowiedź: zamiast
+```cpp
+  } else {
+```
+wpisz
+```
+  }
+  if (lightLevel > 800) {
+```
 
 ---
 
 ## Co dalej?
 
-W następnym rozdziale:
-- nauczymy mikrokontroler **słuchać**  
-- dodamy dźwięk albo przycisk  
-- albo sprawimy, że to Ty zdecydujesz, co jest „ciemno”  
-
-Mikrokontroler już patrzy.  
-Teraz zacznie reagować.
+W następnym rozdziale zrobimy prosty **instrument muzyczny**  
