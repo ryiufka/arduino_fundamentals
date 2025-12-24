@@ -49,20 +49,36 @@ Z zestawu weź:
 
 Każdy przycisk będzie jednym „klawiszem”.
 
-Podłącz przyciski do płytki stykowej tak, żeby:
-- jeden pin przycisku był połączony z masą (GND),
-- drugi pin był podłączony do wejścia mikrokontrolera,
-- rezystor zapobiegał przypadkowemu włączaniu.
+Użyj przycisków tact-switch i włóż je **w poprzek przerwy**
+na płytce stykowej.
+Dzięki temu przycisk nie będzie cały czas wciśnięty.
+
+Podłącz:
+- jedną stronę przycisku do GND,
+- drugą stronę przycisku do pinu mikrokontrolera (np. 2, 3, 4, 5).
+
+Nie używamy dodatkowych rezystorów.
+Mikrokontroler ma je w środku.
 
 ---
 
 ## Krok 2: podłącz buzzer
 
-Buzzer będzie wydawał dźwięk.
+Buzzer to element, który wydaje dźwięk.
+
+Użyj **buzzera pasywnego**  
+(buzzer z generatorem gra tylko jeden dźwięk i tutaj się nie nadaje).
+
+Buzzer ma dwie nóżki:
+- jedna to sygnał,
+- druga to masa (GND).
 
 Podłącz:
-- jeden pin buzzera do pinu cyfrowego mikrokontrolera,
-- drugi pin do GND.
+- nóżkę sygnałową buzzera do pinu cyfrowego mikrokontrolera (np. 8),
+- drugą nóżkę buzzera do GND.
+
+Nie potrzebujesz rezystora.
+Buzzer pasywny może być bezpiecznie podłączony bezpośrednio do pinu.
 
 Na razie cisza.  
 To dobrze.
@@ -78,9 +94,44 @@ Program:
 - przypisuje mu dźwięk,
 - i każe buzzerowi zagrać nutę.
 
-W Arduino IDE wklej kod instrumentu.
+W Arduino IDE wpisz kod instrumentu.
 
-[ TU WSTAW KOD PROGRAMU INSTRUMENTU ]
+```
+int buzzerPin = 8;
+
+int key1 = 2;
+int key2 = 3;
+int key3 = 4;
+int key4 = 5;
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
+
+  pinMode(key1, INPUT_PULLUP);
+  pinMode(key2, INPUT_PULLUP);
+  pinMode(key3, INPUT_PULLUP);
+  pinMode(key4, INPUT_PULLUP);
+}
+
+void loop() {
+
+  if (digitalRead(key1) == LOW) {
+    tone(buzzerPin, 262);   // C
+  }
+  else if (digitalRead(key2) == LOW) {
+    tone(buzzerPin, 294);   // D
+  }
+  else if (digitalRead(key3) == LOW) {
+    tone(buzzerPin, 330);   // E
+  }
+  else if (digitalRead(key4) == LOW) {
+    tone(buzzerPin, 349);   // F
+  }
+  else {
+    noTone(buzzerPin);
+  }
+}
+```
 
 Kliknij **Sprawdź**, a potem **Wgraj**.
 
@@ -124,25 +175,12 @@ Mikrokontroler:
 - włączył drgania buzzera,
 - i wyłączył je, gdy puściłeś klawisz.
 
-To dokładnie ten sam schemat, co wcześniej:
-**jeśli coś się wydarzy, zrób coś**.
-
-Tylko że teraz:
-- „coś się wydarzy” to naciśnięcie klawisza,
-- „zrób coś” to zagranie dźwięku.
-
 ---
 
 ## Spróbuj sam
 
-Wybierz jeden pomysł i spróbuj go zrealizować.
-
-### 1. Pianino z większą liczbą klawiszy
-Dodaj:
-- więcej przycisków,
-- więcej dźwięków.
-
-Ile klawiszy da się sensownie obsłużyć?
+### 1. Zabawa dźwiękami
+Zmień wydawane dźwięki i sprawdź jak brzmią
 
 ---
 
@@ -153,21 +191,12 @@ Zrób program, który:
 
 ---
 
-### 3. Instrument perkusyjny
-Zmień wydawane dźwięki tak, żeby:
-- jeden przycisk był „bębnem”,
-- inny „hi-hatem”,
-- jeszcze inny „klaskaniem”.
+### 3. Pianino z większą liczbą klawiszy
+Dodaj:
+- więcej przycisków,
+- więcej dźwięków.
 
-To już nie pianino.  
-To perkusja.
-
----
-
-### 4. Instrument reagujący na czas
-Spraw, żeby:
-- im dłużej trzymasz przycisk,
-- tym dłużej albo głośniej gra dźwięk.
+Ile klawiszy da się sensownie obsłużyć?
 
 ---
 
